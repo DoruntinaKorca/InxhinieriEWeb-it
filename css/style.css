@@ -3,6 +3,7 @@ html {
 }
 body {
   min-height: 100%;
+  margin: 0 auto;
 }
 /*---------------PJESA E HOMEPAGE-----------------*/
 #logo{
@@ -395,10 +396,107 @@ body {
 
 
 
+/*---------------PJESA E MENU----------------*/
+.fotoMenu{
+  background-image: url(../Images/FoodMenuFoto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center ;
+  width: 100%;
+  height: 320px;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+
+}
+h1{
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  display: block;
+  padding: 140px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+
+}
+ .teksti{
+  text-align: center;
+  justify-content: center;
+ }
+
+ .textCategory{
+color: rgb(141, 53, 126);
+ }
+
+ .dessMenu{
+   width: 100%;
+   height: 150px;
+   justify-content: center;
+   align-items: center;
+  background-color: #FFE5D9;
+
+ }
+ 
+ h3{
+   font-size:40px;
+   text-align: center;
+   margin:0 auto;
+   padding: 60px;
+ }
+.menu{
+  background-color: #FFE5D9;
+  width: 100%;
+  height: 1000px;
+  
+}
+.elementet{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.kolona1{
+  height: 300px;
+  flex-direction: column;  
+}
+
+.kolona2{
+  height: 300px;
+  flex-direction: column;
+}
+.k1{
+  border: solid rgb(190, 10, 10) 1px;
+width: 500px;
+margin: 20px;
+height: 200px;
+margin-bottom: 60px;
+border-radius: 25px;
+display: flex;
+padding: 20px;
+background-color: white;
+}
 
 
-/*---------------PJESA E MENU-----------------*/
+.fotojaKatrore{
+  border: solid black 1px;
+  width: 150px;
+  height: 150px;
+ border-radius: 25px;
+}
 
+.fotojaKatrore img{
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  border-radius: 25px;
+
+}
+ 
+.data{
+  border: solid black 1px;
+  width: 380px;
+  height: 200px;
+
+}
 
 
 
