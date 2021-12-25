@@ -5,10 +5,7 @@ body {
   min-height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, span{
-  margin: 0;
-  padding: 0;
-}
+
 
 /*---------------PJESA E HOMEPAGE-----------------*/
 #logo{
@@ -414,7 +411,7 @@ h1, h2, h3, h4, h5, h6, p, span{
   padding: 0%;
 
 }
-.fotoMenu teksti h1{
+.fotoMenu  h1{
   color: rgb(255, 255, 255);
   font-size: 2rem;
   display: block;
@@ -439,7 +436,7 @@ align-items: center;
   background-color: #FFE5D9;
 }
 
-h3{
+.dessMenu h3{
 font-size:40px;
 text-align: center;
 margin:0 auto;
@@ -485,7 +482,11 @@ background-color: white;
   border-radius: 25px;
 }
 
-
+.fotojaKatrore img{
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+}
 
 
 .data{
@@ -500,6 +501,7 @@ background-color: white;
 }
 
 .butoniOrder{
+  margin-top: 40px;
   margin-left: 290px;
   width: 90px;
   height: 40px;
@@ -704,6 +706,7 @@ background-color: white;
 
 
 
+/*---------------PJESA E ORDER-----------------*/
 
 .fotojaBack{
   width: 100%;
