@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cakes</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <nav id="navbar">
-      <div id="logo">
-        <img src="Images/cake.png" alt="logo" />
-        <h2>Cake</h2>
-      </div>
-      <div id="navUl">
-        <a href="#">Home</a>
-        <a href="Categories.html">Categories</a>
-        <a href="ContactUs.html">Contact</a>
-        <a href="AboutUs.html">About Us</a>
-        <a href="Register.html">Register</a>
-        <!--   <a href="Register.html"><img class="userProfile" src="Images/user.png" alt="user"></a> 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cakes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="logo">
+      <img src="Images/cake.png" alt="logo" />
+      <h2>Cake</h2>
+    </div>
+    <div id="navUl">
+      <a href="#">Home</a>
+      <a href="Categories.html">Categories</a>
+      <a href="ContactUs.html">Contact</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="Register.html">Register</a>
+      <!--   <a href="Register.html"><img class="userProfile" src="Images/user.png" alt="user"></a> 
  !-->
+    </div>
+  </nav>
+
+
+  <div class="fotojaBack">
+    <h3>Confirm your order by filling this form</h3>
+
+    <fieldset class="katrori1">
+      <legend>Selected Food</legend>
+
+      <div class="menuImg">
+        <img src="Images/pink2.jpg" alt="fotojaMenu">
       </div>
-    </nav>
-    Order
-  </body>
+
+      <div class="menuData">
+        <h2>Dessert</h2>
+        <p>2.3€</p>
+        <div class="sasia">Quantity</div>
+        <input type="number" name="qty" class="inputiSasia" value="1" required>
+      </div>
+    </fieldset>
+
+    <fieldset class="katrori2">
+      <legend>Delivery Details </legend>
+      <div class="sasia">Name</div>
+      <input type="text" placeholder="Full Name" name="name" class="inputiSasia" required>
+
+      <div class="sasia">Phone Number</div>
+      <input type="text" placeholder="Phone Number" name="phoneNumber" class="inputiSasia" required>
+
+      <div class="sasia">Email</div>
+      <input type="text" placeholder="Email" name="email" class="inputiSasia" required>
+
+      <div class="sasia">Address</div>
+      <textarea type="text" placeholder="Address" rows="10" name="address" class="adresa" required></textarea>
+
+      <button class="confirmOrder">Confirm Order</button>
+    </fieldset>
+
+
+  </div>
+
+</body>
+
 </html>
