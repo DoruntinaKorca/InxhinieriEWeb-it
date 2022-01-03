@@ -984,7 +984,7 @@ border-style: solid;
   background-position: 60%;
   background-repeat: no-repeat;
   background-color: rgb(167 127 164 / 40%);
-  background-blend-mode: multiply;
+  background-blend-mode: multiply; 
 }
 
 .all_unit{
@@ -997,6 +997,7 @@ border-style: solid;
 .contact_unit{
 display: flex;
 padding: 3% 5%;
+margin: 0 0 0 5%;
 grid-gap: 60px;
 }
 
@@ -1010,12 +1011,10 @@ padding-left: 60px;
 }
 
 .contact_info h3{
+  margin: 0;
+  padding-top:0;
   font-size: 18px;
   padding-bottom: 20px;
-}
-
-p{
-margin: 0;
 }
 
 .contact_bottom{
@@ -1034,8 +1033,22 @@ text-align: center;
 }
 
 .top h3{
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   padding-bottom: 20px;
+}
+
+#address p{
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 4px;
+}
+
+#info p{
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 4px;
 }
 
 .form_control{
@@ -1232,8 +1245,7 @@ textarea{
 
 
 .content{
-  display: block;
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(238, 223, 232);
   padding-bottom: 50px;
 }
 
@@ -1243,13 +1255,14 @@ margin: 0;
 padding: 0;
 font-size: 15px;
 line-height: 1.5;
+text-align: justify;
 }
 
 #about_title{
 margin: 0;
 padding-bottom: 20px;
 }
-
+/*
 .first-row{
   display: flex;
   justify-content: space-evenly;
@@ -1266,18 +1279,88 @@ padding-bottom: 20px;
   flex-direction: row;
   grid-gap: 25px;
 }
+*/
+
+.flexbox-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0% 15%;
+}
+
+
+@media all and (max-width: 800px) {
+  .flexbox-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flexbox-container > .first-column {
+    flex: 1 1 100%;
+  }
+
+  .flexbox-container > .second-column {
+    flex: 1 1 100%;
+  }
+
+  .flexbox-container > .third-column {
+    flex: 1 1 100%;
+  }
+
+  .flexbox-container > .fourth-column {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+
+
+
+.item{
+  margin: 5% 0 5% 0;
+}
 
 .photos{
   height: 200px;
   width: 200px;
+  object-fit: cover;
+}
+
+.first-column > div .photos{
+  flex: 1 1 150px;
+}
+
+.first-column{
+  margin: 0 2.5%;
+}
+
+.second-column > div .photos{
+  flex: 1 1 150px;
+}
+
+.second-column{
+  margin: 0 2.5% 2.5%;
+}
+
+.third-column > div .photos{
+  flex: 1 1 150px;
+}
+
+.third-column{
+  margin: 0 2.5%;
+}
+
+.fourth-column > div .photos{
+  flex: 1 1 150px;
+}
+
+.fourth-column{
+  margin: 0 2.5%;
 }
 
 .about_left{
-  padding: 3.5% 5%;
-}
-
-.flexbox-container{
-  margin: 0% 5%;
+  padding: 3.5% 18%;
 }
 
 
