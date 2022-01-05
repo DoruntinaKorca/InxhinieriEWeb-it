@@ -1358,15 +1358,6 @@ margin: 0;
 padding-bottom: 20px;
 }
 
-.second-row{
-  display: flex;
-  justify-content: space-evenly;
-  align-content: space-between;
-  flex-direction: row;
-  grid-gap: 25px;
-}
-*/
-
 .flexbox-container{
   display: flex;
   justify-content: center;
@@ -1848,7 +1839,6 @@ padding-bottom: 20px;
 }
 .registerForm{
   border: 2px solid #344e41;
-  
   color: white;
   background-image: url("../Images/graybg.jpg");
   opacity: 90%;
@@ -1857,50 +1847,71 @@ padding-bottom: 20px;
   justify-content: center;
 }
 .regSz{
-  height: 460px;
   width: 380px;
+  height: 460px;
 }
 .logSz{
- height: 360px;
- width: 380px;
-}
+  height: 360px;
+  width: 380px;
+ }
 .reg{
-  width:320px;
-  height: 440px;
+  width: 320px;
+height: 440px;
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
 }
-.reg h2{
+.inputReg{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin-top: -20px;
 }
-.reg p{
-  font-size:18px;
+.inputReg input{
+  font-size: 15px;
+  padding: 4px;
+  margin-top: -10px;
+  border-radius: 3px;
+  
+}
+.inputReg p{
+  font-size: 17px;
   font-weight: 550;
 }
-.reg input{
-  margin:6px 0 15px 0;
-  border-radius: 3px;
+.reg h2{
+  align-self: center;
 }
 .reg button{
-align-items: center;
-height: 45px;
-background-color: #4f772d;
-color: white;
-border: 1px solid black;
-margin: 10px 0 10px 0;
-font-weight: 550;
-border-radius: 4px;
-}
-.reg button:hover{
-  background-color: #8cb369;
-}
-.reg a{
-  color: #8cb369;
-}
-#alr{
-  font-weight: 200;
-}
-
+  align-items: center;
+  height: 38px;
+  background-color: #4f772d;
+  color: white;
+  border: 1px solid black;
+  margin: 22px 0 10px 0;
+  font-weight: 550;
+  border-radius: 4px;
+  }
+  .reg button:hover{
+    background-color: #8cb369;
+  }
+  .reg a{
+    color: #8cb369;
+  }
+  #alr{
+    font-weight: 200;
+    margin-top: -2px;
+  }
+  #alrglog{
+    font-weight: 200;
+    
+  }
+  .logp input{
+    font-size: 15px;
+    padding: 4px;
+    margin-top: -10px;
+    border-radius: 3px;
+  }
+  .logp p{
+    font-size: 17px;
+  font-weight: 550;
+  }
 /*---------------PJESA E LOGIN-----------------*/
