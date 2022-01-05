@@ -1040,15 +1040,15 @@ text-align: center;
 }
 
 #address p{
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 4px;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 4px !important;
 }
 
 #info p{
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 4px;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 4px !;
 }
 
 .form_control{
@@ -1083,12 +1083,12 @@ label{
   padding-bottom: 5px;
 }
 
-input{
+#contact_input{
   height: 32px;
   font-size: 16px;
 }
 
-textarea{
+#contact_textarea{
   font-size: 16px;
 }
 
@@ -1242,7 +1242,7 @@ textarea{
 
 
 
-
+/*---------------PJESA E ABOUT US-----------------*/
 
 .content{
   background-color: rgb(238, 223, 232);
@@ -1261,15 +1261,6 @@ text-align: justify;
 #about_title{
 margin: 0;
 padding-bottom: 20px;
-}
-/*
-.first-row{
-  display: flex;
-  justify-content: space-evenly;
-  align-content: space-between;
-  flex-direction: row;
-  margin-bottom: 15px;
-  grid-gap: 25px;
 }
 
 .second-row{
@@ -1311,10 +1302,6 @@ padding-bottom: 20px;
     flex: 1 1 100%;
   }
 }
-
-
-
-
 
 
 .item{
