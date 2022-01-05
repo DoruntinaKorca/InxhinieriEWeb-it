@@ -1882,6 +1882,7 @@ padding-bottom: 20px;
   height: 440px;
   display: flex;
   flex-direction: column;
+  border: 2px solid red;
 }
 .reg h2{
   display: flex;
