@@ -1249,7 +1249,6 @@ label{
   padding-bottom: 50px;
 }
 
-
 #text, #text1, #text2{
 margin: 0;
 padding: 0;
@@ -1263,87 +1262,84 @@ margin: 0;
 padding-bottom: 20px;
 }
 
-.flexbox-container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0% 15%;
-}
-
-
-@media all and (max-width: 800px) {
-  .flexbox-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flexbox-container > .first-column {
-    flex: 1 1 100%;
-  }
-
-  .flexbox-container > .second-column {
-    flex: 1 1 100%;
-  }
-
-  .flexbox-container > .third-column {
-    flex: 1 1 100%;
-  }
-
-  .flexbox-container > .fourth-column {
-    flex: 1 1 100%;
-  }
-}
-
-
-.item{
-  margin: 5% 0 5% 0;
-}
-
 .photos{
-  height: 200px;
+  height: 180px;
   width: 200px;
+  border-radius: 15px;
   object-fit: cover;
 }
 
-.first-column > div .photos{
-  flex: 1 1 150px;
+.aboutus_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+    justify-content: center;
 }
 
-.first-column{
-  margin: 0 2.5%;
+.nested_about{
+  width: 70%;
+  padding-top: 35px;
+  padding-bottom: 40px;
 }
 
-.second-column > div .photos{
-  flex: 1 1 150px;
+.about_content{
+  display: flex;
+  justify-content: center;
 }
 
-.second-column{
-  margin: 0 2.5% 2.5%;
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+   
+   .nested_about{
+     width: 85%;
+   }
+   
 }
 
-.third-column > div .photos{
-  flex: 1 1 150px;
-}
+@media screen and (min-width: 811px) and (max-width: 991px) {
 
-.third-column{
-  margin: 0 2.5%;
-}
+  .aboutus_grid{
+    grid-template-columns: repeat(3, 0fr);
+  }
 
-.fourth-column > div .photos{
-  flex: 1 1 150px;
-}
+  .nested_about{
+    width: 80%;
+  }
 
-.fourth-column{
-  margin: 0 2.5%;
-}
-
-.about_left{
-  padding: 3.5% 18%;
 }
 
 
+@media screen and (min-width: 500px) and (max-width: 810px) {
 
+  .nested_about{
+    width: 90%;
+  }
 
+  .aboutus_grid{
+    grid-template-columns: repeat(2, 0fr);
+  }
+
+}
+
+@media screen and (max-width: 499px) {
+   
+  .nested_about{
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .aboutus_grid{
+    grid-template-columns: repeat(1, 0fr);
+  }
+
+  .photos{
+    height: 180px;
+    width: 280px;
+    object-fit: cover;
+  } 
+
+}
 
 
 
