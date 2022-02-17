@@ -9,22 +9,23 @@
   </head>
   <body>
     <div id="registerContainer" class="loginBg">
-      <form class="registerForm logSz"
-       action="#" action="post">
-       <div class="reg logp">
-        <h2>Sign in</h2>
-        <p>Email:</p>
-        <input type="email" name="email" placeholder="Email">
-        <p>Password:</p>
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Login</button>
-        <p id="alrlog">Don't have an account? 
-          <a href="Register.html">Sign up</a>
+      <form class="registerForm logSz" action="#" action="post" id="loginForm">
+        <div class="reg logp">
+          <h2>Sign in</h2>
+          <p>Email:</p>
+          <input type="email" placeholder="Email" id="email" />
+          <label for="email" id="emailError" class="errorInput"></label>
+          <p>Password:</p>
+          <input type="password" placeholder="Password" id="password" />
+          <label for="password" id="passwordError" class="errorInput"></label>
+          <button type="submit" id="loginBtn">Login</button>
+          <p id="alrlog">
+            Don't have an account?
+            <a href="Register.html">Sign up</a>
           </p>
-       </div>
+        </div>
       </form>
-      
     </div>
+    <script src="js/loginValidate.js"></script>
   </body>
 </html>
-
