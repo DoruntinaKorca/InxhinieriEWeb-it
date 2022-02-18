@@ -23,6 +23,7 @@ btns.forEach((btn, i) => {
 });
 
 //autoplay
+/* 
 var repeat = function (activeClass) {
   let active = document.getElementsByClassName("active");
   let i = 1;
@@ -49,3 +50,4 @@ var repeat = function (activeClass) {
   repeater();
 }
  repeat();
+*/
