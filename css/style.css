@@ -1071,29 +1071,21 @@ border-style: solid;
 
 /*---------------PJESA E CONTACT-----------------*/
 
-.contact_photo img{
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-size: cover;
-  background-position: 60%;
-  background-repeat: no-repeat;
-  background-color: rgb(167 127 164 / 40%);
-  background-blend-mode: multiply; 
-}
-
 .all_unit{
   display: block;
-  grid-gap: 30px;
   padding-bottom: 60px;
   background-color: #d8e2dc;
 }
 
 .contact_unit{
 display: flex;
+align-items: center;
 padding: 3% 5%;
-margin: 0 0 0 5%;
-grid-gap: 60px;
+margin: 0 5% 0 5%;
+}
+
+.contact_textarea{
+max-width: 100%;
 }
 
 .contact{
@@ -1146,50 +1138,122 @@ text-align: center;
   padding-bottom: 4px !;
 }
 
-.form_control{
-display: grid;
-margin-bottom: 15px;
-font-size: 16px;
-width: 100%;
-color: #000;
+.form_control{ 
+  display: flex;
+  margin-bottom: 15px;
+  margin-right: 30px;
+  font-size: 16px;
+  width: 100%;
+  color: #000;
+  flex-direction: column;
 }
 
 .form_unit{
   display: flex;
-  grid-gap: 30px;
 }
 
-.btn_send{
+button{
+  text-align: center;
   font-size: 16px;
   padding: 8px 30px;
   border: none;
   background: #106c34;
   color: #fff;
   margin-top: 15px;
-  font-weight: 500;
+  font-weight: 500;*/
 }
 
-.btn_send:hover{
+button:hover{
   background: #00722c;
 }
+
+input.invalid {
+  border: 1px solid red;
+}
+
+.error-hint{
+  color: red;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.hidden{
+  display: none;
+}
+
+.thank-you{
+  padding: 40px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.error-border{
+  border-bottom: 1px solid red;
+}
+
+#source {
+  color: #28A745;
+}
+
 
 label{
   font-size: 14px;
   padding-bottom: 5px;
 }
 
-#contact_input{
+.contact_input{
   height: 32px;
   font-size: 16px;
 }
 
-#contact_textarea{
+.contact_textarea{
+  margin-right: 30px;
   font-size: 16px;
 }
 
+@media (max-width: 1000px){
+  .contact_unit{
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .contact{
+    width: 90%;
+  }   
+  .contact_info{
+    padding-top: 40px;
+    padding-left:0 !important;
+  }
+
+  .contact_unit{
+    align-items: flex-start;
+  }
 
 
+}
 
+@media (max-width: 740px){
+  .form_unit{
+    flex-direction: column;
+  }
+
+  .contact_info{
+    padding-top: 40px;
+    padding-left:0 !important;
+  }
+
+  .contact_unit{
+    align-items: flex-start;
+  }
+
+  .contact_textarea {
+    margin-right: 0;
+  }
+
+  .contact{
+    width: 85%;
+  }
+
+}
 
 
 
@@ -1362,14 +1426,18 @@ padding-bottom: 20px;
   width: 200px;
   border-radius: 15px;
   object-fit: cover;
+  margin: 15px;
 }
 
-.aboutus_grid{
-    display: grid;
-    grid-template-columns: repeat(4, 0fr);
-    grid-column-gap: 25px;
-    grid-row-gap: 20px;
-    justify-content: center;
+
+.about_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .nested_about{
@@ -1390,11 +1458,9 @@ padding-bottom: 20px;
    }
    
 }
-
 @media screen and (min-width: 811px) and (max-width: 991px) {
 
-  .aboutus_grid{
-    grid-template-columns: repeat(3, 0fr);
+  .about_container{
   }
 
   .nested_about{
@@ -1402,20 +1468,16 @@ padding-bottom: 20px;
   }
 
 }
-
-
 @media screen and (min-width: 500px) and (max-width: 810px) {
 
   .nested_about{
     width: 90%;
   }
 
-  .aboutus_grid{
-    grid-template-columns: repeat(2, 0fr);
+  .about_container{
   }
 
 }
-
 @media screen and (max-width: 499px) {
    
   .nested_about{
@@ -1424,8 +1486,7 @@ padding-bottom: 20px;
     padding-bottom: 30px;
   }
 
-  .aboutus_grid{
-    grid-template-columns: repeat(1, 0fr);
+  .about_container{
   }
 
   .photos{
