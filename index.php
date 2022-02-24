@@ -27,7 +27,7 @@
         <a href="Categories.html">Categories</a>
         <a href="ContactUs.html">Contact</a>
         <a href="AboutUs.html">About Us</a>
-        <a href="Register.html">Register</a>
+        <a href="Register.php">Register</a>
         <!--   <a href="Register.html"><img class="userProfile" src="Images/user.png" alt="user"></a> 
  !-->
       </div>
