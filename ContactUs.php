@@ -13,21 +13,9 @@
   </head>
   <body>
 
-    <nav id="navbar">
-      <div id="logo" class="centerClass">
-        <img src="Images/cake.png" alt="logo" />
-        <h2>Cake</h2>
-      </div>
-      <div id="navUl" class="centerClass">
-        <a href="index.html">Home</a>
-        <a href="Categories.html">Categories</a>
-        <a href="ContactUs.html">Contact</a>
-        <a href="AboutUs.html">About Us</a>
-        <a href="Register.html">Register</a>
-        <!--   <a href="Register.html"><img class="userProfile" src="Images/user.png" alt="user"></a> 
-   !-->
-      </div>
-    </nav>
+  <?
+      include 'header.php';
+    ?>
     <main>
       <div class="all_unit"> 
          <div class="contact_unit">

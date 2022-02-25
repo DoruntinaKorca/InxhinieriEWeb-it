@@ -12,26 +12,9 @@
     ></script>
   </head>
   <body>
-    <nav id="navbar">
-      <div id="logo" class="centerClass">
-        <img src="Images/cake.png" alt="logo" />
-        <h2 class="hdy">Cake</h2>
-      </div>
-      <a href="#" class="toggle-buttonn"> 
-        <span class="barr"></span>
-        <span class="barr"></span>
-        <span class="barr"></span>
-      </a>
-      <div id="navUl">
-        <a href="#">Home</a>
-        <a href="Categories.html">Categories</a>
-        <a href="ContactUs.html">Contact</a>
-        <a href="AboutUs.html">About Us</a>
-        <a href="Register.php">Register</a>
-        <!--   <a href="Register.html"><img class="userProfile" src="Images/user.png" alt="user"></a> 
- !-->
-      </div>
-    </nav>
+    <?
+      include 'header.php';
+    ?>
     <div id="homepageContainer">
       <div class="homepageSlider">
         <div class="slide active">
@@ -85,25 +68,9 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div id="logo" class="centerClass" class="footerlogo">
-        <img src="Images/cake.png" alt="logo" />
-        <h2 class="dbi">Cake</h2>
-      </div>
-      <div class="contactOn centerClass">
-        <h3>Contact us on:</h3>
-        <div class="footerIcons centerClass">
-          <i class="fab fa-facebook fa-2x"></i>
-          <i class="fab fa-instagram fa-2x"></i>
-          <div class="footerEmail">
-            <i class="fas fa-envelope fa-2x"></i>
-          </div>
-          <div>
-            <i class="fas fa-phone-square-alt fa-2x"></i>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <?
+    include 'footer.php';
+    ?>
     <script src="js/cake.js"></script>
     <script src="js/navButton.js"></script>
   </body>
