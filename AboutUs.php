@@ -57,7 +57,7 @@
           </div>
         </div>
          
-          <div class="aboutus_grid">
+          <div class="about_container">
            
                   <div class="about_item">
                     <img class="photos" src="Images/cake1.jpg" alt="">
