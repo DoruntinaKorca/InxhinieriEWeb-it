@@ -14,9 +14,7 @@
 
     <div class="adminMainContent">
     <h2>Manage Orders</h2>
-        
-
-      
+        <h2>mng</h2>
     </div>
 
     <?
