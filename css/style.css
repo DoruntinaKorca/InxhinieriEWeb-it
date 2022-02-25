@@ -729,7 +729,7 @@ text-align: center;
 }
 
 
-button{
+.btn_contact{
   text-align: center;
   font-size: 16px;
   padding: 8px 30px;
@@ -740,7 +740,7 @@ button{
   font-weight: 500;
 }
 
-button:hover{
+.btn_contact:hover{
   background: #00722c;
 }
 

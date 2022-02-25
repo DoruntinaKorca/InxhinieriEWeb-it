@@ -83,7 +83,7 @@
                          <div class="error-hint hidden">Message is required</div>
                        </div>
                    
-                       <button type="submit">Submit Form</button>
+                       <button class="btn_contact" type="submit">Submit Form</button>
                     
  
              </form>
