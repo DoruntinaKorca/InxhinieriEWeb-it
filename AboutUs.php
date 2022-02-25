@@ -98,6 +98,9 @@
           </div> 
       </div>
     </main>
+    <?
+    include 'footer.php';
+    ?>
   </body>
 </html>
 

@@ -129,5 +129,8 @@
          </div> 
      </main>
      <script src="js/contactvalidim.js"></script>
+     <?
+    include 'footer.php';
+    ?>
    </body>
  </html>
