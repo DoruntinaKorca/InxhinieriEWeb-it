@@ -15,19 +15,19 @@
         <h2>Register now</h2>
         <div class="inputReg">
           <p>Full Name:</p>
-          <input type="text" class="regInput" placeholder="Full name" id="fullname">
+          <input type="text" name="fullname" class="regInput" placeholder="Full name" id="fullname">
           <label for="fullname" id="fullNameError" class="errorInputReg"></label>
 
           <p>Username:</p>
-          <input type="text" class="regInput" name="username" placeholder="Username" id="username">
+          <input type="text" name="username" class="regInput"  placeholder="Username" id="username">
           <label for="username" id="usernameError" class="errorInputReg"></label>
 
           <p>Email:</p>
-          <input type="email" class="regInput" name="email" placeholder="Email" id="email">
+          <input type="email" name="email" class="regInput"  placeholder="Email" id="email">
           <label for="email" id="emailRegError" class="errorInputReg"></label>
 
           <p>Password:</p>
-          <input type="password" class="regInput" name="password" placeholder="Password" id="password">
+          <input type="password" name="password" class="regInput"  placeholder="Password" id="password">
           <label for="password" id="passwordRegError" class="errorInputReg"></label>
 
           <button type="submit" id="regBtn">Register</button>
