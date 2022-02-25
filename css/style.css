@@ -1033,9 +1033,6 @@ padding-bottom: 20px;
 }
 @media screen and (min-width: 811px) and (max-width: 991px) {
 
-  .about_container{
-  }
-
   .nested_about {
     width: 80%;
   }
@@ -1043,8 +1040,6 @@ padding-bottom: 20px;
 @media screen and (min-width: 500px) and (max-width: 810px) {
   .nested_about {
     width: 90%;
-  }
-  .about_container{
   }
 }
 @media screen and (max-width: 499px) {
@@ -1054,9 +1049,6 @@ padding-bottom: 20px;
     padding-bottom: 30px;
   }
 
-
-  .about_container{
-  }
 
   .photos {
     height: 180px;
