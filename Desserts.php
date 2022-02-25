@@ -56,7 +56,7 @@
                         <p class="cmimi">3.0€</p>
                         <p>Crepes with chocolate and strawberries</p>
 
-                        <a href="Order.html">
+                        <a href="Order.php">
                             <button class="butoniOrder">Order now</button>
                         </a>
                     </div>
@@ -72,7 +72,7 @@
                         <p class="cmimi">3.0€</p>
                         <p>Round cake with vanilla icing</p>
 
-                        <a href="Order.html">
+                        <a href="Order.php">
                             <button class="butoniOrder">Order now</button>
                         </a>
                     </div>
@@ -91,7 +91,7 @@
                         <p class="cmimi">2.5€</p>
                         <p>Cup cakes with fruit topings</p>
 
-                        <a href="Order.html">
+                        <a href="Order.php">
                             <button class="butoniOrder">Order now</button>
                         </a>
                     </div>
@@ -107,7 +107,7 @@
                         <p class="cmimi">1.5€</p>
                         <p>Donuts made with colorful fruity topings</p>
 
-                        <a href="Order.html">
+                        <a href="Order.php">
                             <button class="butoniOrder">Order now</button>
                         </a>
                     </div>
@@ -122,7 +122,7 @@
                         <p class="cmimi">1.5€</p>
                         <p>Small tartes with orange</p>
 
-                        <a href="Order.html">
+                        <a href="Order.php">
                             <button class="butoniOrder">Order now</button>
                         </a>
                     </div>

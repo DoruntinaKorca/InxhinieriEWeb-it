@@ -21,7 +21,7 @@
           <button type="submit" id="loginBtn">Login</button>
           <p id="alrlog">
             Don't have an account?
-            <a href="Register.html">Sign up</a>
+            <a href="Register.php">Sign up</a>
           </p>
         </div>
       </form>

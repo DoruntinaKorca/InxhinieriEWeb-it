@@ -17,18 +17,23 @@
           <p>Full Name:</p>
           <input type="text" class="regInput" placeholder="Full name" id="fullname">
           <label for="fullname" id="fullNameError" class="errorInputReg"></label>
+
           <p>Username:</p>
           <input type="text" class="regInput" name="username" placeholder="Username" id="username">
           <label for="username" id="usernameError" class="errorInputReg"></label>
+
           <p>Email:</p>
           <input type="email" class="regInput" name="email" placeholder="Email" id="email">
           <label for="email" id="emailRegError" class="errorInputReg"></label>
+
           <p>Password:</p>
           <input type="password" class="regInput" name="password" placeholder="Password" id="password">
           <label for="password" id="passwordRegError" class="errorInputReg"></label>
+
           <button type="submit" id="regBtn">Register</button>
+          
           <p id="alr">Already have an account? 
-            <a href="Login.html">Sign in</a>
+            <a href="Login.php">Sign in</a>
             </p>
 
 
