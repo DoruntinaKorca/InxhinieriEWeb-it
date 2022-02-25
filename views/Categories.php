@@ -24,47 +24,47 @@
 
         <div class="exKatrori">
           <div class="exploreKatrori firstSquare katroratt">
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Cakes</h2>
             </a>
           </div>
           <div class="exploreKatrori secondSquare katroratt">
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Waffles</h2>
             </a>
           </div>
           <div class="exploreKatrori thirdSquare katroratt">
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Cupcakes</h2>
             </a>
           </div>
           <div class="exploreKatrori forthSquare katroratt">
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Candy</h2>
             </a>
           </div>
           <div class="exploreKatrori fifthSquare katroratt">
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Donuts</h2>
             </a>
           </div>
           <div class="exploreKatrori sixthSquare katroratt">
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Pies</h2>
             </a>
           </div>
           <div class="exploreKatrori seventhSquare katroratt" >
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Biscuits</h2>
             </a>
           </div>
           <div class="exploreKatrori eighthSquare katroratt">
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Crepes</h2>
             </a>
           </div>
           <div class="exploreKatrori ninthSquare katroratt">
-            <a href="Desserts.html">
+            <a href="Desserts.php">
               <h2>Milk Shakes</h2>
             </a>
           </div>
