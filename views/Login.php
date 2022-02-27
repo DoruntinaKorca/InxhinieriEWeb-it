@@ -1,3 +1,8 @@
+<?
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,22 +14,25 @@
   </head>
   <body>
     <div id="registerContainer" class="loginBg">
-      <form class="registerForm logSz" action="#" action="post" id="loginForm">
+      <form class="registerForm logSz" method="post"   id="loginForm">
         <div class="reg logp">
           <h2>Sign in</h2>
           <p>Email:</p>
-          <input type="email" placeholder="Email" id="email" />
+          <input type="email" name="email"placeholder="Email" id="email" />
           <label for="email" id="emailError" class="errorInput"></label>
           <p>Password:</p>
-          <input type="password" placeholder="Password" id="password" />
+          <input type="password" name="password" placeholder="Password" id="password" />
           <label for="password" id="passwordError" class="errorInput"></label>
-          <button type="submit" id="loginBtn">Login</button>
+          <button type="submit" name="loginButton" value="login" id="loginBtn">Login</button>
           <p id="alrlog">
             Don't have an account?
             <a href="Register.php">Sign up</a>
           </p>
         </div>
       </form>
+      <?
+     include '../controllers/accountController.php';
+     ?>
     </div>
     <script src="js/loginValidate.js"></script>
   </body>

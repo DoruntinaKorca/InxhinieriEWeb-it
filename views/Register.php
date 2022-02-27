@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,27 +11,36 @@
   <body>
     <div id="registerContainer" class="registerBg">
       <form class="registerForm regSz"
-       action="#" action="post">
+      method="post" action="<?=$_SERVER['PHP_SELF']?>">
        <div class="reg">
         <h2>Register now</h2>
         <div class="inputReg">
+        
           <p>Full Name:</p>
           <input type="text" name="fullname" class="regInput" placeholder="Full name" id="fullname">
+     
           <label for="fullname" id="fullNameError" class="errorInputReg"></label>
 
           <p>Username:</p>
           <input type="text" name="username" class="regInput"  placeholder="Username" id="username">
-          <label for="username" id="usernameError" class="errorInputReg"></label>
+          <label for="username"  id="usernameError" class="errorInputReg"></label>
 
           <p>Email:</p>
           <input type="email" name="email" class="regInput"  placeholder="Email" id="email">
-          <label for="email" id="emailRegError" class="errorInputReg"></label>
+          <label for="email" name="emailErr" id="emailRegError" class="errorInputReg">
+         
+
+          </label>
 
           <p>Password:</p>
           <input type="password" name="password" class="regInput"  placeholder="Password" id="password">
-          <label for="password" id="passwordRegError" class="errorInputReg"></label>
+          <label for="password" id="passwordRegError" class="errorInputReg">
+          
+          </label>
 
-          <button type="submit" id="regBtn">Register</button>
+          
+
+          <button type="submit" name="registerBtn" value="register" id="regBtn">Register</button>
           
           <p id="alr">Already have an account? 
             <a href="Login.php">Sign in</a>
@@ -41,6 +51,9 @@
         
        </div>
       </form>
+     <?
+     include '../controllers/accountController.php';
+     ?>
     </div>
     <script src="js/registerValidate.js"></script>
   </body>
