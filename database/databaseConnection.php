@@ -4,7 +4,7 @@ class DBConnection{
     private $server="localhost";
     private $username="root";
     private $password="";
-    private $database="cakeDB";
+    private $database="cakedb";
 
 
     function startConnection(){
