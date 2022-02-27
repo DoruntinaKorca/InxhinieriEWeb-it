@@ -1,0 +1,147 @@
+/*
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.adminWrapper {
+  padding: 1%;
+  width: 80%;
+
+  margin: 0 auto;
+}
+.footerCenter {
+  text-align: center;
+}
+.adminFooter {
+  background-color: #f4acb7;
+  color: white;
+}
+
+
+.adminMenu ul{
+list-style-type: none;
+}
+.adminMenu{
+    background-color: #f4acb7;
+}
+.adminMenu ul{
+    font-style: none;
+    width: 400px;
+    display: flex;
+    
+    flex-direction: row;
+    padding: 1%;
+    justify-content: space-between;
+}
+.adminMenu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+}
+.adminMenu ul li a:hover{
+    cursor: pointer;
+    color: #b7b7a4;
+    font: bold;
+}
+
+.contentW{
+    display: flex;
+    padding: 3% 0;
+}
+.adminMainContent h2{
+border: 1px solid gray;
+display: flex;
+padding: 3% 0;
+justify-content: center;
+}
+.AdminCol-4{
+    width: 18%;
+    margin: 2%;
+    padding: 2%;
+    border: 1px solid red;
+}
+.tbl-full{
+  width: 80%;
+  margin: 0 auto;
+ 
+}
+.tbl-full tr th{
+  justify-content: flex-start;
+  border-bottom: 1px solid black;
+  padding: 1%;
+  text-align:left;
+}
+.tbl-full tr td{
+  padding: 1%;
+}
+.kl{
+  border: 1px solid red;
+}
+.butoniRed{
+background-color: #ee6055;
+text-decoration: none;
+  color: white;
+  padding:0.8%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.butoniRed:hover{
+background-color: #ff9b85;
+}
+.butoniGreen{
+  background-color: #60d394;
+  text-decoration: none;
+  color: white;
+  padding:0.8%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.butoniGreen:hover{
+  background-color: #c0df85;
+}
+.butoniU{
+  border: 1px solid gray;
+  border-radius: 12px;
+  margin-left: 130px;
+  background-color: #60d394;
+  text-decoration: none;
+  color: white;
+  padding:0.6%;
+}
+.butoniU:hover{
+  background-color: #b7b7a4;
+}
+
+.editUser{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.editUser .klv{
+  width: 300px;
+  padding-bottom: 1%;
+  margin: 6px 0 20px 0;
+  border: 1px solid black;
+}
+.editUser label{
+  font-weight: bold;
+}
+#saveB{
+  padding:1%;
+}
+.kb{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #60d394;
+}
+.kb:hover{
+  background-color: #c0df85;
+}
