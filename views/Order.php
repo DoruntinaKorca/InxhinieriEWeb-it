@@ -51,7 +51,7 @@
     </fieldset>
 
    
-      <form  id="katrori2" action="Desserts.html">
+      <form action="<?=$_SERVER['PHP_SELF']?>" method="POST" id="katrori2" action="Desserts.html">
       <legend class="legjenda">Delivery Details </legend>
       <div class="sasia" >Name</div>
       <input type="text" id="emri" placeholder="Full Name" name="name" class="inputiSasia" required>
@@ -69,15 +69,18 @@
       <input type="text" id="adresa" placeholder="Address" name="address" class="inputiSasia" required>
       <label for="address" id="adresaErr" class="errorInput"></label>
 
-      <button  class="confirmOrder" id="confirmOrder"> Confirm Order</button>
+      <input class="confirmOrder" id="confirmOrder" type="submit" name="confirmBtn" value="Confirm Order"><br><br>
+    
      
   </form>
-  
+
+<?php include_once '../controllers/orderController.php'?>
    
   </div>
   <?
     include 'footer.php';
     ?>
 <script src="js/order.js"></script>
+
 </body>
 </html>
