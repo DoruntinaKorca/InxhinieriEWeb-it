@@ -16,7 +16,7 @@
     <h2>Manage Cakes</h2>
         
     <br><br>
-    <a href="#" class="butoniU"> Add Menu </a>
+    <a href="addMenu.php" class="butoniU"> Add Menu </a>
     <br> <br>
         <table class="tbl-full">
             <tr >
@@ -32,8 +32,8 @@
                 <td>doruntinak</td>
                 <td>dk40651@ubt-uni.net</td>
                 <td>
-                    <a href="#" class="butoniRed">Edit</a>
-                    <a href="#" class="butoniGreen">Delete</a>
+                    <a href="editMenu.php" class="butoniGreen">Edit</a>
+                    <a href="#" class="butoniRed">Delete</a>
                 </td>
             </tr>
             <tr >
@@ -42,8 +42,8 @@
                 <td>doruntinak</td>
                 <td>dk40651@ubt-uni.net</td>
                 <td>
-                    <a href="#" class="butoniRed">Edit</a>
-                    <a href="#" class="butoniGreen">Delete</a>
+                    <a href="editMenu.php" class="butoniGreen">Edit</a>
+                    <a href="#" class="butoniRed">Delete</a>
                 </td>
             </tr>
             <tr >
@@ -52,8 +52,8 @@
                 <td>doruntinak</td>
                 <td>dk40651@ubt-uni.net</td>
                 <td>
-                    <a href="#" class="butoniRed">Edit</a>
-                    <a href="#" class="butoniGreen">Delete</a>
+                    <a href="editMenu.php" class="butoniGreen">Edit</a>
+                    <a href="#" class="butoniRed">Delete</a>
                 </td>
             </tr>
         </table>

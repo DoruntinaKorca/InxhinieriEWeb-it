@@ -94,7 +94,7 @@ text-decoration: none;
 background-color: #ff9b85;
 }
 .butoniGreen{
-  background-color: #60d394;
+  background-color: #ee9b00;
   text-decoration: none;
   color: white;
   padding:0.8%;
@@ -102,7 +102,7 @@ background-color: #ff9b85;
   border-radius: 5px;
 }
 .butoniGreen:hover{
-  background-color: #c0df85;
+  background-color: #ca6702;
 }
 .butoniU{
   border: 1px solid gray;

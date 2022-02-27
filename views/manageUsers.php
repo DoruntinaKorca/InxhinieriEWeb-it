@@ -38,8 +38,8 @@
                 <td>$user[username]</td>
                 <td>$user[email]</td>
                 <td>
-                    <a href=\"editUser.php?id=$user[users_id]\" class=\"butoniRed\">Edit</a>
-                    <a href=\"deleteUser.php?id=$user[users_id]\" class=\"butoniGreen\">Delete</a>
+                    <a href=\"editUser.php?id=$user[users_id]\" class=\"butoniGreen\">Edit</a>
+                    <a href=\"deleteUser.php?id=$user[users_id]\" class=\"butoniRed\">Delete</a>
                 </td>
             </tr>  ";
             }
