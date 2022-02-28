@@ -17,22 +17,26 @@
     <h2 >Add Menu</h2>
    
      
-      <form action="" method="POST" class="editUser">
-      <label for="">Id: </label>
-        <input type="text" name="" value="" class="klv" readonly> 
-        <label for="">fullname: </label>
-        <input type="text" name="" value="" class="klv"> 
-        <label for="">username: </label>
-        <input type="text" name="" value="" class="klv"> 
-        <label for="">email: </label>
-        <input type="text" name="" value="" class="klv"> 
-        <label for="">password: </label>
-        <input type="text" name="" value="" class="klv">
-      
+      <form action="" method="POST" class="editUser" enctype="multipart/form-data">
+      <label for="">Title: </label>
+        <input type="text" name="menu_title" value="" class="klv"> 
+        
+        <label for="">Price: </label>
+        <input type="text" name="menu_price" value="" class="klv"> 
 
-        <input type="submit" name="saveMenu" value="save" class="klv kb">
+        <label for="">Img: </label>
+        <br>
+        <input type="file" name="menu_img" value=""> 
+        <br>
+        <label for="">Description: </label>
+        <input type="text" name="menu_description" value="" class="klv"> 
+        
+     
+        <input type="submit" name="AddSaveMenu" value="save" class="klv kb">
 </form>
-
+<?
+include '../controllers/menuController.php';
+?>
     </div>
    
 

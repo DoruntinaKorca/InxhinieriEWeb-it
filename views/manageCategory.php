@@ -21,48 +21,33 @@
         <table class="tbl-full">
             <tr >
                 <th >Id</th>
-                <th>fullname</th>
-                <th>username</th>
-                <th>email</th>
+                <th>Title</th>
+                <th>Image</th>
                 <th>Actions</th>
             </tr>
-            <tr >
-                <td>1</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
-                <td>
-                    <a href="editCategory.php" class="butoniGreen">Edit</a>
-                    <a href="#" class="butoniRed">Delete</a>
-                </td>
-            </tr>
-            <tr >
-                <td>2</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
-                <td>
-                    <a href="editCategory.php" class="butoniGreen">Edit</a>
-                    <a href="#" class="butoniRed">Delete</a>
-                </td>
-            </tr>
-            <tr >
-                <td>3</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
-                <td>
-                    <a href="editCategory.php" class="butoniGreen">Edit</a>
-                    <a href="#" class="butoniRed">Delete</a>
-                </td>
-            </tr>
+            <?
+            include '../repositories/categoryRepository.php';
+            $categoryRepository = new categoryRepository();
+            $categories = $categoryRepository->getAllCategories();
+
+            foreach($categories as $category){
+                echo " <tr >
+                        <td>$category[category_id]</td>
+                        <td>$category[category_title]</td>
+                        <td>$category[category_img]</td>  
+                         <td>
+                        <a href=\"editCategory.php?category_id=$category[category_id]\" class=\"butoniGreen\">Edit</a>
+                        <a href=\"deleteCategory.php?category_id=$category[category_id]\" class=\"butoniRed\">Delete</a>
+                        </td>
+                       </tr>";
+            }
+            ?>
+           
         </table>
 
       
     </div>
 
-    <?
-    include 'adminFooter.php';
-    ?>
+    
 </body>
 </html>

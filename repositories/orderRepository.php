@@ -37,8 +37,17 @@ class OrderRepository{
         return $orders;
     }
 
+    function deleteOrderById($Id){
+        $conn = $this->connection;
+
+        $sql = "DELETE FROM dessertorder WHERE Id=?";
+
+        $statement = $conn->prepare($sql);
+        $statement->execute([$Id]);
+        echo "<script> alert('Order has been deleted successfully!') </script>";
+    }
+    
+
 }
 
-$orderRepo=new OrderRepository();
-print_r($orderRepo->getAllOrders());
 ?>

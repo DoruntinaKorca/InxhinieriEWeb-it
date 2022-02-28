@@ -55,17 +55,25 @@ session_start();
         <div class="middleContent centerClass">
           <h1>Explore cakes</h1>
           <div class="exploreThem">
-            <div class="exploreKatrori firstSquare">
-              <a href="Desserts.html">
-                <h2>Cakes</h2>
-              </a>
-            </div>
-            <div class="exploreKatrori secondSquare">
-              <a href="Desserts.html"> <h2>Waffles</h2></a>
-            </div>
-            <div class="exploreKatrori thirdSquare">
-              <a href="Desserts.html"><h2>Cupcakes</h2></a>
-            </div>
+           
+          <div class="exploreKatrori katroratt">
+            <img src="images/chokocake.jpg" alt="">
+            <a href="Desserts.php">
+              <h2 >Cakes</h2>
+            </a>
+          </div>
+          <div class="exploreKatrori katroratt">
+          <img src="images/chokocake.jpg" alt="">
+            <a href="Desserts.php">
+              <h2>Waffles</h2>
+            </a>
+          </div>
+          <div class="exploreKatrori katroratt">
+          <img src="images/chokocake.jpg" alt="">
+            <a href="Desserts.php">
+              <h2>Cupcakes</h2>
+            </a>
+          </div>
           
           </div>
         </div>

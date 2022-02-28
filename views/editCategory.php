@@ -16,19 +16,38 @@
     <div class="adminMainContent">
     <h2 >Edit Category</h2>
   
-     
-      <form action="" method="POST" class="editUser">
+    <?php
+    
+include '../repositories/categoryRepository.php';
+$category_id = $_GET['category_id'];
+
+$categoryRepository = new categoryRepository();
+
+$category = $categoryRepository->getUserById($category_id);
+
+ if(isset($_POST['saveCategory'])){
+   
+
+    $id = $category_id;
+    $category_title = $_POST['category_title'];
+    $category_img = $_POST['category_img'];
+
+    $categoryRepository->updateCategory($id,$category_title,$category_img);
+    echo "<script>alert('Category updated successfully');</script>";
+    header("location:manageCategory.php");
+}
+
+
+?>
+      <form action="" method="POST" class="editUser" enctype="multipart/form-data">
       <label for="">Id: </label>
-        <input type="text" name="users_id" value="" class="klv" readonly> 
-        <label for="">fullname: </label>
-        <input type="text" name="fullname" value="" class="klv"> 
-        <label for="">username: </label>
-        <input type="text" name="username" value="" class="klv"> 
-        <label for="">email: </label>
-        <input type="text" name="email" value="" class="klv"> 
-        <label for="">password: </label>
-        <input type="text" name="password" value="" class="klv">
-      
+        <input type="text" name="category_id" value="<?=$category['category_id']?>" class="klv" readonly> 
+        <label for="">title: </label>
+        <input type="text" name="category_title" value="<?=$category['category_title']?>" class="klv"> 
+        <label for="">img: </label>
+        <br>
+        <input type="file" name="category_img" value="<?=$category['category_img']?>"> 
+        <br>
 
         <input type="submit" name="saveCategory" value="save" class="klv kb">
 </form>

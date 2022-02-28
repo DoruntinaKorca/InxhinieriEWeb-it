@@ -13,7 +13,7 @@
     ?>
 
     <div class="adminMainContent">
-    <h2>Manage Cakes</h2>
+    <h2>Manage Menu</h2>
         
     <br><br>
     <a href="addMenu.php" class="butoniU"> Add Menu </a>
@@ -21,48 +21,38 @@
         <table class="tbl-full">
             <tr >
                 <th >Id</th>
-                <th>fullname</th>
-                <th>username</th>
-                <th>email</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Description</th>
                 <th>Actions</th>
             </tr>
-            <tr >
-                <td>1</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
-                <td>
-                    <a href="editMenu.php" class="butoniGreen">Edit</a>
-                    <a href="#" class="butoniRed">Delete</a>
-                </td>
-            </tr>
-            <tr >
-                <td>2</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
-                <td>
-                    <a href="editMenu.php" class="butoniGreen">Edit</a>
-                    <a href="#" class="butoniRed">Delete</a>
-                </td>
-            </tr>
-            <tr >
-                <td>3</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
-                <td>
-                    <a href="editMenu.php" class="butoniGreen">Edit</a>
-                    <a href="#" class="butoniRed">Delete</a>
-                </td>
-            </tr>
+            <?
+            include '../repositories/menuRepository.php';
+            $menuRepository = new menuRepository();
+            $menus = $menuRepository->getAllMenus();
+
+            foreach($menus as $menu){
+                echo " <tr >
+                        <td>$menu[menu_id]</td>
+                        <td>$menu[menu_title]</td>
+                        <td>$menu[menu_price]</td>
+                        <td>$menu[menu_img]</td>
+                        <td>$menu[menu_description]</td>
+                          
+                         <td>
+                        <a href=\"editMenu.php?menu_id=$menu[menu_id]\" class=\"butoniGreen\">Edit</a>
+                        <a href=\"deleteMenu.php?menu_id=$menu[menu_id]\" class=\"butoniRed\">Delete</a>
+                        </td>
+                       </tr>";
+            }
+            ?>
+           
         </table>
 
       
     </div>
 
-    <?
-    include 'adminFooter.php';
-    ?>
+    
 </body>
 </html>

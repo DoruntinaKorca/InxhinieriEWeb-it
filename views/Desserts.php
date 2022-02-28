@@ -19,7 +19,7 @@
     ?>
 
     <section class="fotoMenu teksti">
-        <h1>Go to <a href="Categories.html" class="textCategory">"Categories"</a>
+        <h1>Go to <a href="Categories.php" class="textCategory">"Categories"</a>
             for more desserts </h1>
     </section>
 
@@ -40,8 +40,8 @@
                         <p class="cmimi">1.5€</p>
                         <p>Round biscuit with choco chunks</p>
 
-                        <a href="Order.html">
-                            <button href="Order.html" class="butoniOrder">Order now</button>
+                        <a href="Order.php">
+                            <button href="Order.php" class="butoniOrder">Order now</button>
                         </a>
                     </div>
                 </div>

@@ -23,19 +23,29 @@
 
 
 .adminMenu ul{
+  
 list-style-type: none;
 }
 .adminMenu{
     background-color: #f4acb7;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
 }
 .adminMenu ul{
     font-style: none;
-    width: 400px;
-    display: flex;
     
-    flex-direction: row;
+    
     padding: 1%;
     justify-content: space-between;
+}
+.abcf{
+  display: flex;
+ width: 400px;
+ margin: 0 auto;
+  flex-direction: row;
 }
 .adminMenu ul li a{
     text-decoration: none;
@@ -48,7 +58,10 @@ list-style-type: none;
     color: #b7b7a4;
     font: bold;
 }
-
+.logoutC{
+  font-style: none;
+ width: 80px;
+}
 .contentW{
     display: flex;
     padding: 3% 0;

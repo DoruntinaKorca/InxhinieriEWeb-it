@@ -68,9 +68,7 @@ class UserRepository{
                 $conn = $this->connection;
                 $statement = $conn->prepare("SELECT * FROM users WHERE email = ?;");
                 
-               
-                
-                
+                  
                 $passwordHashed = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $checkPassword = password_verify($password,$passwordHashed["password"]);
 
@@ -103,6 +101,8 @@ class UserRepository{
 
         }
 
+
+
         function getAllUsers(){
             $conn = $this->connection;
             $sql = "SELECT * FROM users";
@@ -112,6 +112,8 @@ class UserRepository{
     
             return $users;
         }
+
+
 
         function getUserById($users_id){
             $conn = $this->connection;
@@ -124,6 +126,8 @@ class UserRepository{
           }
 
         
+
+
         function updateUser($id,$fullname,$username,$email,$password){
             $conn = $this->connection;
     
@@ -134,6 +138,9 @@ class UserRepository{
             $statement->execute([$fullname,$username,$email,$password,$id]);
             echo "<script> alert('User has been updated successfuly!') </script>";
         }
+
+
+        
         function deleteUserById($users_id){
             $conn = $this->connection;
     

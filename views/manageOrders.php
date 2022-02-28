@@ -20,6 +20,7 @@
     <?//<a href="#" class="butoniU"> Add Users </a>?>
     <br> <br>
         <table class="tbl-full">
+            
             <tr >
                 <th >Id</th>
                 <th>fullname</th>
@@ -27,43 +28,33 @@
                 <th>email</th>
                 <th>Actions</th>
             </tr>
-            <tr >
-                <td>1</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
+            <?
+            include '../repositories/orderRepository.php';
+            $orderRepository = new OrderRepository();
+            $orders = $orderRepository->getAllOrders();
+
+                foreach($orders as $order){
+                    echo "
+                    <tr >
+                <td>$order[Id]</td>
+                <td>$order[Name]</td>
+                <td>$order[PhoneNumber]</td>
+                <td>$order[Email]</td>
+                <td>$order[Address]</td>
                 <td>
                  
-                    <a href="#" class="butoniRed">Delete</a>
+                    <a href=\"deleteOrder.php?Id=$order[Id]\" class=\"butoniRed\">Delete</a>
                 </td>
             </tr>
-            <tr >
-                <td>2</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
-                <td>
+                    ";
                     
-                    <a href="#" class="butoniRed">Delete</a>
-                </td>
-            </tr>
-            <tr >
-                <td>3</td>
-                <td>doruntina korca</td>
-                <td>doruntinak</td>
-                <td>dk40651@ubt-uni.net</td>
-                <td>
-                    
-                    <a href="#" class="butoniRed">Delete</a>
-                </td>
-            </tr>
+                }
+            ?>
+            
         </table>
 
 
     </div>
 
-    <?
-    include 'adminFooter.php';
-    ?>
 </body>
 </html>

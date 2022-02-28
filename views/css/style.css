@@ -159,33 +159,32 @@ body {
   height: 320px;
   border-radius: 20px;
   display: flex;
+  justify-content: center;
+  margin: 3px;
+}
+.exploreKatrori img{
+  width: 270px;
+  height: 320px;
+  border-radius: 20px;
+  display: flex;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0cm;
   justify-content: center;
   margin: 3px;
+  
 }
 
-.firstSquare {
-  background-image: url("../images/chokocake.jpg");
-}
-.secondSquare {
-  background-image: url("../images/waffle.jpg");
-}
-.thirdSquare {
-  background-image: url("../images/cup3.jpg");
-}
-.fSquare {
-  background-image: url("../images/2.jpg");
 
-}
 
 .exploreKatrori a {
+  color: white;
+  position: absolute;
   margin-top: 130px;
   text-decoration: none;
-  color: white;
-  height: 70px;
+  text-align: center;
 }
+
 
 footer {
   height: 160px;
@@ -222,30 +221,7 @@ footer {
   justify-content: center;
 }
 
-.firstSquare {
-  background-image: url("../images/chokocake.jpg");
-}
-.secondSquare {
-  background-image: url("../images/waffle.jpg");
-}
-.forthSquare {
-  background-image: url("../images/candy1.jpg");
-}
-.fifthSquare {
-  background-image: url("../images/donut1.jpg");
-}
-.sixthSquare {
-  background-image: url("../images/pies.jpg");
-}
-.seventhSquare {
-  background-image: url("../images/biscuit.jpg");
-}
-.eighthSquare {
-  background-image: url("../images/crepes.jpg");
-}
-.ninthSquare {
-  background-image: url("../images/milkshakes.jpg");
-}
+
 /* per tablet */
 
 /*---------------PJESA E MENU----------------*/
@@ -1713,30 +1689,7 @@ display: flex;
     height: 40px;
     font-size: 12px;
   }
-  .firstSquare {
-    background-image: url("../images/chokocake.jpg");
-  }
-  .secondSquare {
-    background-image: url("../images/waffle.jpg");
-  }
-  .forthSquare {
-    background-image: url("../images/candy1.jpg");
-  }
-  .fifthSquare {
-    background-image: url("../images/donut1.jpg");
-  }
-  .sixthSquare {
-    background-image: url("../images/pies.jpg");
-  }
-  .seventhSquare {
-    background-image: url("../images/biscuit.jpg");
-  }
-  .eighthSquare {
-    background-image: url("../images/crepes.jpg");
-  }
-  .ninthSquare {
-    background-image: url("../images/milkshakes.jpg");
-  }
+ 
 
 
 

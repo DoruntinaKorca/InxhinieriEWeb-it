@@ -17,23 +17,19 @@
     <h2 >Add Category</h2>
    
      
-      <form action="" method="POST" class="editUser">
-      <label for="">Id: </label>
-        <input type="text" name="" value="" class="klv" readonly> 
+      <form action="" method="POST" class="editUser" enctype="multipart/form-data">
+      <label for="">Title: </label>
+        <input type="text" name="category_title" value="" class="klv"> 
         
-        <label for="">title: </label>
-        <input type="text" name="" value="" class="klv"> 
-
         <label for="">image: </label> <br>
-        <input type="file" name="" value="" > 
+        <input type="file" name="category_img" value="" > 
         <br><br>
      
-        
-      
-
         <input type="submit" name="saveCategoryy" value="save" class="klv kb">
 </form>
-
+<?
+include '../controllers/categoryController.php';
+?>
     </div>
    
 
