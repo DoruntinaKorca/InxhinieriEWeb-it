@@ -23,7 +23,7 @@ else{
 </head>
 
 <body>
-  <?    include 'header.php'; ?>
+  <?    include 'includes/header.php'; ?>
       
 
   <div class="container">
@@ -57,7 +57,7 @@ else{
     </div>
   </div>
 
-  <? include 'footer.php';  ?>
+  <? include 'includes/footer.php';  ?>
 
 </body>
 </html>

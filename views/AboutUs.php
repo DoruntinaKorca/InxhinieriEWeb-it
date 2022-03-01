@@ -22,7 +22,7 @@ else{
   </head>
   <body>
   <?
-      include 'header.php';
+      include 'includes/header.php';
     ?>
 
     <main>
@@ -108,7 +108,7 @@ else{
       </div>
     </main>
     <?
-    include 'footer.php';
+    include 'includes/footer.php';
     ?>
   </body>
 </html>

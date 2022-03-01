@@ -7,6 +7,7 @@
             <li><a href="ManageCategory.php">Categories</a></li>
             <li><a href="manageCakes.php">Cake Menu</a></li>
             <li><a href="manageOrders.php">Orders</a></li>
+            <li><a href="contactdashboard.php">Messages</a></li>
         </ul>
 
         

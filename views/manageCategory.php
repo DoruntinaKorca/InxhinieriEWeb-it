@@ -18,7 +18,7 @@ else{
 </head>
 <body>
     <?
-    include 'adminHeader.php';
+    include 'includes/adminHeader.php';
     ?>
 
     <div class="adminMainContent">
@@ -59,7 +59,7 @@ else{
       
     </div>
     <?
-    include 'adminFooter.php';
+    include 'includes/adminFooter.php';
     ?>
     
 </body>

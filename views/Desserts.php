@@ -24,7 +24,7 @@ else{
 
 <body>
 <?
-      include 'header.php';
+      include 'includes/header.php';
     ?>
 
     <section class="fotoMenu teksti">
@@ -74,7 +74,7 @@ else{
         </div>
     </div>
     <?
-    include 'footer.php';
+    include 'includes/footer.php';
     ?>
 </body>
 

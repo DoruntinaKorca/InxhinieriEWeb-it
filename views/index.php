@@ -22,7 +22,7 @@ else{
   </head>
   <body>
     <?
-      include 'header.php';
+      include 'includes/header.php';
     ?>
     <div id="homepageContainer">
       <div class="homepageSlider">
@@ -91,7 +91,7 @@ else{
       </div>
     </div>
     <?
-    include 'footer.php';
+    include 'includes/footer.php';
     ?>
     <script src="js/cake.js"></script>
     <script src="js/navButton.js"></script>

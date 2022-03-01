@@ -18,7 +18,7 @@ else{
 </head>
 <body>
     <?
-    include 'adminHeader.php';
+    include 'includes/adminHeader.php';
     ?>
 
     <div class="adminMainContent">

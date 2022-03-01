@@ -23,7 +23,7 @@ else{
   <body>
 
   <?
-      include 'header.php';
+      include 'includes/header.php';
     ?>
     <main>
       <div class="all_unit"> 
@@ -146,7 +146,7 @@ else{
            </div>
          </div> 
          <?
-          include 'footer.php';
+          include 'includes/footer.php';
         ?>
      </main>
      <script src="js/contactvalidim.js"></script>
