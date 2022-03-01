@@ -32,12 +32,12 @@ class ContactUserRepository{
 
         $sql = "SELECT * FROM contactuser";
         $statement = $conn->query($sql);
-        $users = $statement->fetchAll();
+        $contactusers = $statement->fetchAll();
 
-        return $users;
+        return $contactusers;
     }
 
-    function getUserByUsernameAndPassword($name,$lastname){
+    function getUserByNameAndLastname($name,$lastname){
 
     }
 
