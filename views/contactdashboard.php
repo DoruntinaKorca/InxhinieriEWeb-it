@@ -28,7 +28,7 @@
             <tr>
                 <td>$contactuser[Id]</td>
                 <td>$contactuser[Name]</td>
-                <td>$contactuser[Surname]</td>
+                <td>$contactuser[Lastname]</td>
                 <td>$contactuser[Email]</td>
                 <td>$contactuser[Phone]</td>
                 <td>$contactuser[Message]</td>
