@@ -1,4 +1,12 @@
-
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +18,7 @@
 </head>
 <body>
 <?
-    include 'adminHeader.php';
+    include 'includes/adminHeader.php';
     ?>
 
     <div class="adminMainContent">
@@ -35,3 +43,6 @@ include '../controllers/categoryController.php';
 
 </body>
 </html>
+<?
+}
+?>

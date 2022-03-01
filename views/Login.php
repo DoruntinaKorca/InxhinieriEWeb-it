@@ -1,7 +1,4 @@
-<?
-session_start();
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,3 +34,6 @@ session_start();
     <script src="js/loginValidate.js"></script>
   </body>
 </html>
+<?
+
+?>

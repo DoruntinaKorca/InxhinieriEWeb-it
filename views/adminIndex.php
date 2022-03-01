@@ -1,3 +1,12 @@
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,43 +18,60 @@
 </head>
 <body>
   <?
-  include 'adminHeader.php';
+  include 'includes/adminHeader.php';
   ?>
 
     <div class="adminMainContent">
-    <h2>Dashboard</h2>
+    <h2><? echo "Welcome to your dashboard ".$_SESSION['username'];?></h2>
         <div class="adminWrapper contentW">
         
 
-        <div class="AdminCol-4 footerCenter">
-            <h1>5</h1>
+        <div class="AdminCol-4 ab1 footerCenter">
+            <? include '../repositories/userRepository.php';
+                $userRepo = new userRepository();
+                $u = $userRepo->countUsers();
+                echo"<h1>$u</h1> ";
+            ?>
+            
             <br>
-            Categories
+            <h4>Users</h4>
         </div>
 
-        <div class="AdminCol-4 footerCenter">
-            <h1>5</h1>
+        <div class="AdminCol-4 ab2 footerCenter">
+            <? $userRepo = new userRepository();
+                $u = $userRepo->countCategories();
+                echo"<h1>$u</h1> ";
+                ?>
             <br>
-            Categories
+            <h4>Categories</h4>
         </div>
 
-        <div class="AdminCol-4 footerCenter">
-            <h1>5</h1>
+        <div class="AdminCol-4 ab3 footerCenter">
+            <? $userRepo = new userRepository();
+                $u = $userRepo->countMenus();
+                echo"<h1>$u</h1> ";
+                ?>
             <br>
-            Categories
+            <h4>Menus</h4>
         </div>
 
-        <div class="AdminCol-4 footerCenter">
-            <h1>5</h1>
+        <div class="AdminCol-4 ab4 footerCenter">
+            <? $userRepo = new userRepository();
+                $u = $userRepo->countOrders();
+                echo"<h1>$u</h1> ";
+                ?>
             <br>
-            Categories
+            <h4>Orders</h4>
         </div>
 
         </div>
     </div>
 
    <?
-   include 'adminFooter.php';
+   include 'includes/adminFooter.php';
    ?>
 </body>
 </html>
+<?
+}
+?>

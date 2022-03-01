@@ -33,7 +33,7 @@ body {
 }
 #navbar #navUl {
   justify-content: space-between;
-  width: 350px;
+  width: 400px;
   padding-right: 40px;
   display: flex;
   align-items: center;
@@ -277,18 +277,17 @@ footer {
   align-items: center;
 }
 .kolona1 {
-  height: 300px;
-  flex-direction: column;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  
+  flex-direction: row;
 }
 
-.kolona2 {
-  height: 300px;
-  flex-direction: column;
-}
 
 .k1 {
   border: 1px solid gray;
-  width: 534px;
+  width: 484px;
   margin: 20px;
   height: 200px;
   margin-bottom: 60px;
@@ -312,18 +311,18 @@ footer {
 }
 
 .data {
-  width: 380px;
-  height: 200px;
+  width: 300px;
+  height: 160px;
   margin-left: 20px;
 }
 
 .data p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .butoniOrder {
-  margin-top: 7px;
-  margin-left: 270px;
+  margin-top: 11px;
+  margin-left: 200px;
   width: 90px;
   height: 40px;
   border-radius: 14px;
@@ -1242,6 +1241,7 @@ padding-bottom: 20px;
   }
   .kolona1 {
     display: flex;
+    border: 1px solid red;
     height:max-content;
     flex-direction: column;
   }

@@ -40,9 +40,10 @@ if(isset($_POST['loginButton'])){
     }else{
         $email = $_POST['email'];
         $password = $_POST['password'];
+       // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $userRepository = new userRepository();
         $userRepository->login($email,$password);
-        header("location:index.php");
+       
     }
 }
 

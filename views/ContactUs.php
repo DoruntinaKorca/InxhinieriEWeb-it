@@ -1,3 +1,12 @@
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +23,7 @@
   <body>
 
   <?
-      include 'header.php';
+      include 'includes/header.php';
     ?>
     <main>
       <div class="all_unit"> 
@@ -137,10 +146,13 @@
            </div>
          </div> 
          <?
-          include 'footer.php';
+          include 'includes/footer.php';
         ?>
      </main>
      <script src="js/contactvalidim.js"></script>
 
    </body>
  </html>
+ <?
+}
+ ?>
