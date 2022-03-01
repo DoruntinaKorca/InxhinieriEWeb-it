@@ -1,5 +1,11 @@
 <?
-session_start();
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,30 +26,35 @@ session_start();
     ?>
     <div id="homepageContainer">
       <div class="homepageSlider">
+    
         <div class="slide active">
           <img src="images/is4.jpg" alt="" />
           <div class="sliderInfo">
             <h2>Peanut cake</h2>
           </div>
         </div>
+
         <div class="slide">
           <img src="images/is2.jpg" alt="" />
           <div class="sliderInfo">
             <h2>Cupcakes</h2>
           </div>
         </div>
+
         <div class="slide">
           <img src="images/is1.jpg" alt="" />
           <div class="sliderInfo">
             <h2>Grape Cheesecake</h2>
           </div>
         </div>
+
         <div class="slide">
           <img src="images/is8.jpg" alt="" />
           <div class="sliderInfo">
             <h2>Tart</h2>
           </div>
         </div>
+
         <div class="navigation">
           <div class="btn active"></div>
           <div class="btn"></div>
@@ -56,24 +67,24 @@ session_start();
           <h1>Explore cakes</h1>
           <div class="exploreThem">
            
-          <div class="exploreKatrori katroratt">
-            <img src="images/chokocake.jpg" alt="">
+         
+ <? 
+          include '../repositories/categoryRepository.php';
+      $categoryRepository = new categoryRepository();
+
+      $categories = $categoryRepository->getCategories();
+          
+          foreach($categories as $category){
+            ?>
+                <div class="exploreKatrori katroratt">
+            <img src="images/<?echo $category['category_img'];?>" alt="">
             <a href="Desserts.php">
-              <h2 >Cakes</h2>
+              <h2 ><? echo $category['category_title'] ?></h2>
             </a>
           </div>
-          <div class="exploreKatrori katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Waffles</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Cupcakes</h2>
-            </a>
-          </div>
+            <?
+          }
+          ?>
           
           </div>
         </div>
@@ -86,3 +97,6 @@ session_start();
     <script src="js/navButton.js"></script>
   </body>
 </html>
+<?
+}
+?>

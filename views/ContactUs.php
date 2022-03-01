@@ -1,3 +1,12 @@
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -134,3 +143,6 @@
     ?>
    </body>
  </html>
+ <?
+}
+ ?>

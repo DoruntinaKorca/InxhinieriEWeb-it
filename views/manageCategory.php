@@ -1,3 +1,12 @@
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,21 +34,23 @@
                 <th>Image</th>
                 <th>Actions</th>
             </tr>
+           
             <?
             include '../repositories/categoryRepository.php';
             $categoryRepository = new categoryRepository();
             $categories = $categoryRepository->getAllCategories();
 
-            foreach($categories as $category){
-                echo " <tr >
-                        <td>$category[category_id]</td>
-                        <td>$category[category_title]</td>
-                        <td>$category[category_img]</td>  
+            foreach($categories as $category){?>
+                 <tr > 
+                        <td><?echo $category['category_id']?></td>
+                        <td><?echo $category['category_title']?></td>
+                        <td><img src="images/<?echo $category['category_img']?>" alt=""></td>  
                          <td>
-                        <a href=\"editCategory.php?category_id=$category[category_id]\" class=\"butoniGreen\">Edit</a>
-                        <a href=\"deleteCategory.php?category_id=$category[category_id]\" class=\"butoniRed\">Delete</a>
+                        <a href="editCategory.php?category_id=<?echo $category['category_id']?>" class="butoniGreen">Edit</a>
+                        <a href="deleteCategory.php?category_id=<?echo $category['category_id']?>" class="butoniRed">Delete</a>
                         </td>
-                       </tr>";
+                       </tr>
+               <?
             }
             ?>
            
@@ -47,7 +58,12 @@
 
       
     </div>
-
+    <?
+    include 'adminFooter.php';
+    ?>
     
 </body>
 </html>
+<?
+}
+?>

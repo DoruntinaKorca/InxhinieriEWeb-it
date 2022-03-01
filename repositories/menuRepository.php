@@ -23,7 +23,7 @@ class menuRepository{
         $statement = $conn->prepare($sql);
 
         $statement->execute([$menu_title, $menu_price,$menu_img,$menu_description]);
-        echo "<script>alert('Menu created successfully')</script>";
+        echo "<script>alert('Menu added successfully')</script>";
 
     }
 
@@ -31,7 +31,7 @@ class menuRepository{
 
         $conn=$this->connection;
 
-        $sql="SELECT * FROM menu";
+        $sql="SELECT * FROM menu LIMIT 6";
 
         $statement=$conn->query($sql);
         $menus=$statement->fetchAll();

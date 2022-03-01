@@ -1,7 +1,7 @@
 <footer>
       <div id="logo" class="centerClass" class="footerlogo">
         <img src="Images/cake.png" alt="logo" />
-        <h2 class="dbi">Cake</h2>
+        <h class="dbi">Cake O’Clock</h>
       </div>
       <div class="contactOn centerClass">
         <h3>Contact us on:</h3>

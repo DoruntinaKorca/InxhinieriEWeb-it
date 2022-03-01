@@ -28,12 +28,13 @@ class categoryRepository{
     function getAllCategories(){
         $conn= $this->connection;
 
-        $sql = "SELECT * FROM categories";
+        $sql = "SELECT * FROM categories LIMIT 9";
         $statement = $conn->query($sql);
         $categories = $statement->fetchAll();
         return $categories;
     }
-
+ 
+    
 
 
 
@@ -71,6 +72,15 @@ class categoryRepository{
 
         $statement->execute([$category_title,$category_img,$category_id]);
         echo "<script> alert('Category has been updated successfuly!') </script>";
+    }
+
+    function getCategories(){
+        $conn= $this->connection;
+
+        $sql = "SELECT * FROM categories LIMIT 3";
+        $statement = $conn->query($sql);
+        $categories = $statement->fetchAll();
+        return $categories;
     }
 
 }

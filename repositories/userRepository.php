@@ -64,44 +64,42 @@ class UserRepository{
 
 
 
-    function login($email, $password){
+            function login($email, $password){
                 $conn = $this->connection;
-                $statement = $conn->prepare("SELECT * FROM users WHERE email = ?;");
-                
-                  
-                $passwordHashed = $statement->fetchAll(PDO::FETCH_ASSOC);
-                $checkPassword = password_verify($password,$passwordHashed["password"]);
+              
+                   $statement= $conn->prepare('SELECT * FROM users WHERE email = :email') ;
+                   $statement->bindParam(':email',$email);
+                   $statement->execute();
 
-                if($checkPassword == false){
-                    $statement = null;
-                    header("location:../views/Login.php?error=wrongpassword");
-                    exit();
-                }elseif($checkPassword == true){
-                    $statement = $conn->prepare('SELECT * FROM users WHERE email = ?  AND password = ? ;');
-
-                    if(!$statement->execute(array($email, $password))){
-                  $statement = null;
-                  header("location:../views/Login.php?error=statementFailed"); 
-                  exit();     
-                    }
-                    if($statement->rowCount() == 0){
-                        $statement = null;
-                        header("location:../views/Login.php?error=usernoutfound"); 
-                        exit();
-                    }
                     $user = $statement->fetchAll(PDO::FETCH_ASSOC);
-                    header("location: ../views/index.php");
-                    session_start();
-                  //  $_SESSION['userId'] = $user[0]["users_id"];
-                    $_SESSION['userEmail'] = $user[0]["email"];
-                    $_SESSION['userRole'] = $user[0]["role"];
-                   
-                 
+                    
+                    if(count($user) > 0 && password_verify($password,$user[0]['password'])){
+                      
+                            session_start();
+                  
+                            $_SESSION['login'] = true;
+                            $_SESSION['userId'] = $user[0]["users_id"];
+                            $_SESSION['username'] = $user[0]["username"];
+                              $_SESSION['userEmail'] = $user[0]["email"];
+                              $_SESSION['userRole'] = $user[0]["role"];
+                              $vlera = $user[0]["username"];
+                            // echo "pershendetje".$_SESSION['username'];
+                         //    setcookie('username',$vlera,time()+300,'/');
+                             if($_SESSION['userRole'] == 0){
+                                header("location:../views/index.php");
+                             }
+                             else{
+                                header("location:../views/adminIndex.php");
+                             }
+                        
+                    }else{
+                       echo "<script>alert('Your password is incorrect');</script>";
+                    }
+                    
                 }
 
-        }
 
-
+       
 
         function getAllUsers(){
             $conn = $this->connection;
@@ -125,9 +123,9 @@ class UserRepository{
             return $user;
           }
 
+
+
         
-
-
         function updateUser($id,$fullname,$username,$email,$password){
             $conn = $this->connection;
     
@@ -140,15 +138,53 @@ class UserRepository{
         }
 
 
-        
         function deleteUserById($users_id){
             $conn = $this->connection;
     
             $sql = "DELETE FROM users WHERE users_id=?";
-    
+         
             $statement = $conn->prepare($sql);
+       
             $statement->execute([$users_id]);
             echo "<script> alert('User has been deleted successfuly!') </script>";
+        }
+        function countUsers(){
+            $conn = $this->connection;
+            $sql = "SELECT * FROM users";
+
+            $statement = $conn->query($sql);
+            $users= $statement->fetchAll();
+            $u = count($users);
+            return $u;
+        }
+
+        function countCategories(){
+            $conn = $this->connection;
+            $sql = "SELECT * FROM categories";
+
+            $statement = $conn->query($sql);
+            $categories= $statement->fetchAll();
+            $c = count($categories);
+            return $c;
+        }
+        
+        function countMenus(){
+            $conn = $this->connection;
+            $sql = "SELECT * FROM menu";
+
+            $statement = $conn->query($sql);
+            $menus= $statement->fetchAll();
+            $m = count($menus);
+            return $m;
+        }
+        function countOrders(){
+            $conn = $this->connection;
+            $sql = "SELECT * FROM dessertorder";
+
+            $statement = $conn->query($sql);
+            $orders= $statement->fetchAll();
+            $o = count($orders);
+            return $o;
         }
 
       

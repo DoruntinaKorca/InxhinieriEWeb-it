@@ -1,3 +1,12 @@
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,103 +39,37 @@
 
     <div class="menu">
         <div class="elementet">
+
+
             <div class="kolona1">
+            <?
+            include '../repositories/menuRepository.php';
+            $menuRepository = new menuRepository();
+            $menus = $menuRepository->getAllMenus();
+            foreach($menus as $menu){
+                ?>
                 <div class="k1">
                     <div class="fotojaKatrore">
-                        <img src="Images/1.jpg" alt="foto">
+                        <img src="Images/<?echo $menu['menu_img']?>" alt="foto">
                     </div>
                     <div class="data">
-                        <h2>Chocolate biscuits</h2>
-                        <p class="cmimi">1.5€</p>
-                        <p>Round biscuit with choco chunks</p>
+                        <h2><?echo $menu['menu_title']?></h2>
+                        <p class="cmimi"><?echo $menu['menu_price']?></p>
+                        <p><? echo $menu['menu_description'] ?></p>
 
                         <a href="Order.php">
                             <button href="Order.php" class="butoniOrder">Order now</button>
                         </a>
                     </div>
                 </div>
+                <?
+            }
+            ?>
+                
 
-                <div class="k1">
-                    <div class="fotojaKatrore">
-                        <img src="Images/2.jpg" alt="foto">
-                    </div>
 
-                    <div class="data">
-                        <h2>Strawberry crepes</h2>
-                        <p class="cmimi">3.0€</p>
-                        <p>Crepes with chocolate and strawberries</p>
+               
 
-                        <a href="Order.php">
-                            <button class="butoniOrder">Order now</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="k1">
-                    <div class="fotojaKatrore">
-                        <img src="Images/3.jpg" alt="foto">
-
-                    </div>
-                    <div class="data">
-                        <h2>Vanilla cake</h2>
-                        <p class="cmimi">3.0€</p>
-                        <p>Round cake with vanilla icing</p>
-
-                        <a href="Order.php">
-                            <button class="butoniOrder">Order now</button>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="kolona2">
-                <div class="k1">
-                    <div class="fotojaKatrore">
-                        <img src="Images/4.jpg" alt="foto">
-
-                    </div>
-                    <div class="data">
-                        <h2>Cup cakes</h2>
-                        <p class="cmimi">2.5€</p>
-                        <p>Cup cakes with fruit topings</p>
-
-                        <a href="Order.php">
-                            <button class="butoniOrder">Order now</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="k1">
-                    <div class="fotojaKatrore">
-                        <img src="Images/5.jpg" alt="foto">
-
-                    </div>
-                    <div class="data">
-                        <h2>Donuts</h2>
-                        <p class="cmimi">1.5€</p>
-                        <p>Donuts made with colorful fruity topings</p>
-
-                        <a href="Order.php">
-                            <button class="butoniOrder">Order now</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="k1">
-                    <div class="fotojaKatrore">
-                        <img src="Images/6.jpg" alt="foto">
-                    </div>
-                    <div class="data">
-                        <h2>Orange tarte</h2>
-                        <p class="cmimi">1.5€</p>
-                        <p>Small tartes with orange</p>
-
-                        <a href="Order.php">
-                            <button class="butoniOrder">Order now</button>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -136,3 +79,6 @@
 </body>
 
 </html>
+<?
+}
+?>

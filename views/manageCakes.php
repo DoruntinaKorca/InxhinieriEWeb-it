@@ -1,3 +1,12 @@
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,27 +41,33 @@
             $menuRepository = new menuRepository();
             $menus = $menuRepository->getAllMenus();
 
-            foreach($menus as $menu){
-                echo " <tr >
-                        <td>$menu[menu_id]</td>
-                        <td>$menu[menu_title]</td>
-                        <td>$menu[menu_price]</td>
-                        <td>$menu[menu_img]</td>
-                        <td>$menu[menu_description]</td>
-                          
+           foreach($menus as $menu){?>
+                 <tr > 
+                        <td><?echo $menu['menu_id']?></td>
+                        <td><?echo $menu['menu_title']?></td>
+                        <td><?echo $menu['menu_price']?></td>
+                        <td><?echo $menu['menu_description']?></td>
+                        <td><img src="images/<?echo $menu['menu_img']?>" alt=""></td> 
+                        
                          <td>
-                        <a href=\"editMenu.php?menu_id=$menu[menu_id]\" class=\"butoniGreen\">Edit</a>
-                        <a href=\"deleteMenu.php?menu_id=$menu[menu_id]\" class=\"butoniRed\">Delete</a>
+                        <a href="editMenu.php?menu_id=<?echo $menu['menu_id']?>" class="butoniGreen">Edit</a>
+                        <a href="deleteMenu.php?menu_id=<?echo $menu['menu_id']?>" class="butoniRed">Delete</a>
                         </td>
-                       </tr>";
+                       </tr>
+               <?
             }
             ?>
-           
+
         </table>
 
       
     </div>
-
+    <?
+    include 'adminFooter.php';
+    ?>
     
 </body>
 </html>
+<?
+}
+?>

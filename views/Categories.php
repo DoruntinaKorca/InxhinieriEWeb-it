@@ -1,3 +1,12 @@
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,83 +23,44 @@
 </head>
 
 <body>
-<?
-      include 'header.php';
-    ?>
+  <?    include 'header.php'; ?>
+      
+
   <div class="container">
     <div id="pjesaCakes">
       <div class="middleContent centerClass">
         <h1>Explore cakes</h1>
 
         <div class="exKatrori">
+
           <?
           include '../repositories/categoryRepository.php';
+
           $categoryRepository = new categoryRepository();
+
           $categories = $categoryRepository->getAllCategories();
-          foreach($categories as)
-          
+
+          foreach($categories as $category){ ?>
+
+              <div class="exploreKatrori katroratt">
+               <img src="images/<?echo $category['category_img'];?>" alt="">
+                   <a href="Desserts.php">
+                      <h2 ><?echo  $category['category_title'] ?></h2>
+                  </a>
+             </div>
+             <?
+          }
           ?>
-          <div class="exploreKatrori katroratt">
-            <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2 >Cakes</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Waffles</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Cupcakes</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori  katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Candy</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Donuts</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Pies</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori katroratt" >
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Biscuits</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Crepes</h2>
-            </a>
-          </div>
-          <div class="exploreKatrori katroratt">
-          <img src="images/chokocake.jpg" alt="">
-            <a href="Desserts.php">
-              <h2>Milk Shakes</h2>
-            </a>
-          </div>
+         
         </div>
       </div>
     </div>
   </div>
-  <?
-    include 'footer.php';
-    ?>
-</body>
 
+  <? include 'footer.php';  ?>
+
+</body>
 </html>
+<?
+}
+?>

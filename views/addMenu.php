@@ -1,4 +1,12 @@
-
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,3 +50,6 @@ include '../controllers/menuController.php';
 
 </body>
 </html>
+<?
+}
+?>

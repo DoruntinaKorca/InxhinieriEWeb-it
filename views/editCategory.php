@@ -1,4 +1,12 @@
-
+<?
+ 
+session_start(); 
+if(!isset($_SESSION['username'])){
+  header("location:Login.php");
+}
+else{
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,11 +38,46 @@ $category = $categoryRepository->getUserById($category_id);
 
     $id = $category_id;
     $category_title = $_POST['category_title'];
-    $category_img = $_POST['category_img'];
+   
+    $file = $_FILES['category_img'];
+    $category_img = $_FILES['category_img']['name'];
+    $fileTmpName = $_FILES['category_img']['tmp_name'];
+    $fileSize = $_FILES['category_img']['size'];
+    $fileError = $_FILES['category_img']['error'];
+    $fileType = $_FILES['category_img']['type'];
 
-    $categoryRepository->updateCategory($id,$category_title,$category_img);
-    echo "<script>alert('Category updated successfully');</script>";
-    header("location:manageCategory.php");
+    $fileExt = explode('.',$category_img);
+    $fileActualExt = strtolower(end($fileExt));
+
+    $allowed = array('jpg','jpeg','png');
+
+    if(in_array($fileActualExt, $allowed)){
+        if($fileError===0){
+            if($fileSize < 10000000){
+               $fileNameNew=uniqid('',true).".".$fileActualExt;
+               
+               $fileDestination = '../views/images/'.$fileNameNew;
+                move_uploaded_file($fileTmpName, $fileDestination);
+
+               // $category = new category($category_title, $category_img);
+
+                $categoryRepository = new categoryRepository();
+                $categoryRepository->updateCategory($id,$category_title,$category_img);
+                echo "<script>alert('Category updated successfully');</script>";
+                header("location:manageCategory.php");
+                
+            }else{
+                echo "ur file is too big";
+            }
+        }else{
+            echo "There was an error uploading your file";
+        }
+    }else{
+        echo "u cannot upload files of this type";
+    }
+
+
+   
 }
 
 
@@ -46,6 +89,7 @@ $category = $categoryRepository->getUserById($category_id);
         <input type="text" name="category_title" value="<?=$category['category_title']?>" class="klv"> 
         <label for="">img: </label>
         <br>
+        
         <input type="file" name="category_img" value="<?=$category['category_img']?>"> 
         <br>
 
@@ -57,3 +101,6 @@ $category = $categoryRepository->getUserById($category_id);
 
 </body>
 </html>
+<?
+}
+?>
