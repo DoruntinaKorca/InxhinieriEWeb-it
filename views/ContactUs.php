@@ -23,7 +23,7 @@
              <div class="top">
                  <h3><i>Have a question?</i></h3>
              </div>
-             <form>
+             <form action="<?= $_SERVER["PHP_SELF"] ?>" id="regForm" method="post">
                <div class="form_unit">
                    <div class="form_control">
                        <label>First Name</label>
@@ -34,7 +34,8 @@
                            class="contact_input"  
                            placeholder="Your first name"
                          />
-                       <div class="error-hint hidden">Name is required</div>
+                         <label for="name" id="nameError" class="errorInputReg"></label>
+                       <!--<div class="error-hint hidden">Name is required</div>-->
                    </div>
  
                    <div class="form_control">
@@ -44,8 +45,10 @@
                            type="text" 
                            class="contact_input" 
                            id="lastname" 
-                           placeholder="Your last name"/>
-                       <div class="error-hint hidden">Last name is required</div>
+                           placeholder="Your last name"
+                           />
+                         <label for="lastname" id="lastnameError" class="errorInputReg"></label>
+                      <!-- <div class="error-hint hidden">Last name is required</div>-->
                      </div>
                </div>  
                  
@@ -57,8 +60,10 @@
                            type="text" 
                            class="contact_input" 
                            id="email" 
-                           placeholder="Your email address"/>
-                       <div class="error-hint hidden">Email is invalid</div>
+                           placeholder="Your email address"
+                           />
+                        <label for="email" id="emailError" class="errorInputReg"></label>
+                      <!-- <div class="error-hint hidden">Email is invalid</div>-->
                      </div>
                      <div class="form_control">
                          <label>Phone</label>
@@ -67,8 +72,10 @@
                              type="phone" 
                              class="contact_input" 
                              id="phone" 
-                             placeholder="Phone number"/>
-                         <div class="error-hint hidden">Phone is invalid</div>
+                             placeholder="Phone number"
+                             />
+                          <label for="phone" id="phoneError" class="errorInputReg"></label>
+                        <!-- <div class="error-hint hidden">Phone is invalid</div>-->
                      </div>
                </div>  
                  
@@ -80,20 +87,22 @@
                              class="contact_textarea" 
                              id="message" 
                              placeholder="Message"></textarea>
-                         <div class="error-hint hidden">Message is required</div>
+                          <label for="message" id="messageError" class="errorInputReg"></label>
+                        <!-- <div class="error-hint hidden">Message is required</div>-->
                        </div>
                    
-                       <button class="btn_contact" type="submit">Submit Form</button>
+                        <button class="btn_contact" id="btn_contact" name="contact_Btn" type="submit">Submit Form</button> 
+                       
                     
- 
              </form>
- 
+             <?php require_once '../controllers/contactController.php'?>
+
              <div class="thank-you hidden">
                Thank you for your feedback!
              </div>
  
            </div>
- 
+        
            <div class="contact_info">
              <h3><i>Contact</i></h3>
              <div id="address">
@@ -127,10 +136,11 @@
                </div>
            </div>
          </div> 
+         <?
+          include 'footer.php';
+        ?>
      </main>
      <script src="js/contactvalidim.js"></script>
-     <?
-    include 'footer.php';
-    ?>
+
    </body>
  </html>

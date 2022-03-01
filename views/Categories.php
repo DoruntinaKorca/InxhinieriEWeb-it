@@ -23,47 +23,63 @@
         <h1>Explore cakes</h1>
 
         <div class="exKatrori">
-          <div class="exploreKatrori firstSquare katroratt">
+          <?
+          include '../repositories/categoryRepository.php';
+          $categoryRepository = new categoryRepository();
+          $categories = $categoryRepository->getAllCategories();
+          foreach($categories as)
+          
+          ?>
+          <div class="exploreKatrori katroratt">
+            <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
-              <h2>Cakes</h2>
+              <h2 >Cakes</h2>
             </a>
           </div>
-          <div class="exploreKatrori secondSquare katroratt">
+          <div class="exploreKatrori katroratt">
+          <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
               <h2>Waffles</h2>
             </a>
           </div>
-          <div class="exploreKatrori thirdSquare katroratt">
+          <div class="exploreKatrori katroratt">
+          <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
               <h2>Cupcakes</h2>
             </a>
           </div>
-          <div class="exploreKatrori forthSquare katroratt">
+          <div class="exploreKatrori  katroratt">
+          <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
               <h2>Candy</h2>
             </a>
           </div>
-          <div class="exploreKatrori fifthSquare katroratt">
+          <div class="exploreKatrori katroratt">
+          <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
               <h2>Donuts</h2>
             </a>
           </div>
-          <div class="exploreKatrori sixthSquare katroratt">
+          <div class="exploreKatrori katroratt">
+          <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
               <h2>Pies</h2>
             </a>
           </div>
-          <div class="exploreKatrori seventhSquare katroratt" >
+          <div class="exploreKatrori katroratt" >
+          <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
               <h2>Biscuits</h2>
             </a>
           </div>
-          <div class="exploreKatrori eighthSquare katroratt">
+          <div class="exploreKatrori katroratt">
+          <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
               <h2>Crepes</h2>
             </a>
           </div>
-          <div class="exploreKatrori ninthSquare katroratt">
+          <div class="exploreKatrori katroratt">
+          <img src="images/chokocake.jpg" alt="">
             <a href="Desserts.php">
               <h2>Milk Shakes</h2>
             </a>

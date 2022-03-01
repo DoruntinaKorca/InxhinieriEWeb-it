@@ -18,7 +18,7 @@ button.addEventListener("click", (event) => {
     passwordError.innerText = "password cannot be empty";
     event.preventDefault();
   }
-  else if(password.length > 10 || password < 4){
+  else if(password.length > 15 || password < 4){
       passwordError.innerText = "password should be between 4 to 10 characters long";
       event.preventDefault();
   }
