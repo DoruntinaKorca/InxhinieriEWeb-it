@@ -36,8 +36,8 @@
                 <td>$contactuser[Email]</td>
                 <td>$contactuser[Phone]</td>
                 <td>$contactuser[Message]</td>
-                <td><a href='edit.php?id=$contactuser[Id]'>Edit</a</td>
-                <td><a href='delete.php?id=$contactuser[Id]'>Delete</a></td>
+                <td><a href='editcontact.php?id=$contactuser[Id]'>Edit</a</td>
+                <td><a href='deletecontact.php?id=$contactuser[Id]'>Delete</a></td>
 
             </tr>
             

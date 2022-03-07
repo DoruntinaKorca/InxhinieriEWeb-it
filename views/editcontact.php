@@ -1,11 +1,11 @@
 <?php
 include_once '../repositories/contactuserRepository.php';
 
-$userId = $_GET['id'];
+$contactuserid = $_GET['id'];
 
 $contactuserRepository = new ContactUserRepository();
 
-$contactuser = $contactuserRepository->getUserById($userId);
+$contactuser = $contactuserRepository->getUserById($contactuserid);
 
 ?>
 
@@ -23,7 +23,7 @@ $contactuser = $contactuserRepository->getUserById($userId);
 
 <?php 
 if(isset($_POST['save'])){
-    $id = $userId;
+    $id = $contactuserid;
     $name = $_POST['name'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];

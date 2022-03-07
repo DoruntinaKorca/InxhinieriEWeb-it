@@ -24,6 +24,7 @@ class ContactUserRepository{
 
         $statement = $conn->prepare($sql);
         $statement->execute([$id,$name,$lastname,$email,$phone,$message]);
+        echo "<script> alert('User has been inserted successfuly!') </script>";
     }
 
 
@@ -50,7 +51,7 @@ class ContactUserRepository{
 
         return $contactuser;
     }
-
+    
     function updateUser($id,$name,$lastname,$email,$phone,$message){
         $conn = $this->connection;
         
