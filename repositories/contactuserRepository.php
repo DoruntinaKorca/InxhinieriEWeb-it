@@ -38,10 +38,7 @@ class ContactUserRepository{
         return $contactusers;
     }
 
-    function getUserByNameAndLastname($name,$lastname){
-
-    }
-
+    
     function getUserById($id){
         $conn = $this->connection;
 
